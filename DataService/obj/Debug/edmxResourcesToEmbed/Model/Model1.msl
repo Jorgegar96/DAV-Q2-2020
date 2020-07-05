@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RecommendationAppDBModelStoreContainer" CdmEntityContainer="RecommendationAppDBEntities">
+    <EntitySetMapping Name="Caballito">
+      <EntityTypeMapping TypeName="RecommendationAppDBModel.Caballito">
+        <MappingFragment StoreEntitySet="Caballito">
+          <ScalarProperty Name="dueño" ColumnName="dueño" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="RecommendationAppDBModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="religion" ColumnName="religion" />
+          <ScalarProperty Name="personality" ColumnName="personality" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="birth_year" ColumnName="birth_year" />
+          <ScalarProperty Name="hijos" ColumnName="hijos" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="transport" ColumnName="transport" />
+          <ScalarProperty Name="ambience" ColumnName="ambience" />
+          <ScalarProperty Name="dress_preference" ColumnName="dress_preference" />
+          <ScalarProperty Name="drink_level" ColumnName="drink_level" />
+          <ScalarProperty Name="smoker" ColumnName="smoker" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

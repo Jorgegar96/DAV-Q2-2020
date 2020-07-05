@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RecommendationAppDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Caballito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="30" />
+          <Property Name="dueño" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Caballodetroya">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="30" />
+          <Property Name="dueño" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="RESTAURANTES">
+          <Key>
+            <PropertyRef Name="placeID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="placeID" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="latitude" Type="varchar" MaxLength="500" />
+          <Property Name="longitude" Type="varchar" MaxLength="500" />
+          <Property Name="the_geom_meter" Type="varchar" MaxLength="500" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="address" Type="varchar" MaxLength="500" />
+          <Property Name="city" Type="varchar" MaxLength="500" />
+          <Property Name="state" Type="varchar" MaxLength="500" />
+          <Property Name="country" Type="varchar" MaxLength="500" />
+          <Property Name="fax" Type="varchar" MaxLength="500" />
+          <Property Name="zip" Type="varchar" MaxLength="500" />
+          <Property Name="alcohol" Type="varchar" MaxLength="500" />
+          <Property Name="smoking_area" Type="varchar" MaxLength="500" />
+          <Property Name="dress_code" Type="varchar" MaxLength="500" />
+          <Property Name="accessibility" Type="varchar" MaxLength="500" />
+          <Property Name="price" Type="varchar" MaxLength="500" />
+          <Property Name="url" Type="varchar" MaxLength="500" />
+          <Property Name="Rambience" Type="varchar" MaxLength="500" />
+          <Property Name="franchise" Type="varchar" MaxLength="500" />
+          <Property Name="area" Type="varchar" MaxLength="500" />
+          <Property Name="other_services" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TIPO_COMIDA">
+          <Key>
+            <PropertyRef Name="tipoID" />
+          </Key>
+          <Property Name="tipoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="placeID" Type="varchar" MaxLength="1000" />
+          <Property Name="Rcuisine" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="latitude" Type="varchar" MaxLength="50" />
+          <Property Name="longitude" Type="varchar" MaxLength="50" />
+          <Property Name="smoker" Type="varchar" MaxLength="50" />
+          <Property Name="drink_level" Type="varchar" MaxLength="50" />
+          <Property Name="dress_preference" Type="varchar" MaxLength="50" />
+          <Property Name="ambience" Type="varchar" MaxLength="50" />
+          <Property Name="transport" Type="varchar" MaxLength="50" />
+          <Property Name="marital_status" Type="varchar" MaxLength="50" />
+          <Property Name="hijos" Type="varchar" MaxLength="50" />
+          <Property Name="birth_year" Type="varchar" MaxLength="50" />
+          <Property Name="interest" Type="varchar" MaxLength="50" />
+          <Property Name="personality" Type="varchar" MaxLength="50" />
+          <Property Name="religion" Type="varchar" MaxLength="50" />
+          <Property Name="activity" Type="varchar" MaxLength="50" />
+          <Property Name="color" Type="varchar" MaxLength="50" />
+          <Property Name="weight" Type="varchar" MaxLength="50" />
+          <Property Name="budget" Type="varchar" MaxLength="50" />
+          <Property Name="height" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="RecommendationAppDBModelStoreContainer">
+          <EntitySet Name="Caballito" EntityType="Self.Caballito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Caballodetroya" EntityType="Self.Caballodetroya" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESTAURANTES" EntityType="Self.RESTAURANTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPO_COMIDA" EntityType="Self.TIPO_COMIDA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RecommendationAppDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RecommendationAppDBEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Caballito" EntityType="RecommendationAppDBModel.Caballito" />
+          <EntitySet Name="USUARIOS" EntityType="RecommendationAppDBModel.USUARIOS" />
+          <EntitySet Name="Caballodetroya" EntityType="RecommendationAppDBModel.Caballodetroya" />
+          <EntitySet Name="RESTAURANTES" EntityType="RecommendationAppDBModel.RESTAURANTES" />
+          <EntitySet Name="TIPO_COMIDA" EntityType="RecommendationAppDBModel.TIPO_COMIDA" />
+        </EntityContainer>
+        <EntityType Name="Caballito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="dueño" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="smoker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="drink_level" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dress_preference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ambience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="transport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="marital_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hijos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="birth_year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="personality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="religion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="activity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="budget" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Caballodetroya">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="dueño" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RESTAURANTES">
+          <Key>
+            <PropertyRef Name="placeID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="placeID" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="latitude" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="longitude" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="the_geom_meter" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="fax" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="alcohol" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="smoking_area" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="dress_code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="accessibility" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Rambience" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="franchise" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="area" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="other_services" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TIPO_COMIDA">
+          <Key>
+            <PropertyRef Name="tipoID" />
+          </Key>
+          <Property Name="tipoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="placeID" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Rcuisine" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RecommendationAppDBModelStoreContainer" CdmEntityContainer="RecommendationAppDBEntities" >
+          <EntitySetMapping Name="Caballito">
+            <EntityTypeMapping TypeName="RecommendationAppDBModel.Caballito">
+              <MappingFragment StoreEntitySet="Caballito">
+                <ScalarProperty Name="dueño" ColumnName="dueño" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="RecommendationAppDBModel.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="activity" ColumnName="activity" />
+                <ScalarProperty Name="religion" ColumnName="religion" />
+                <ScalarProperty Name="personality" ColumnName="personality" />
+                <ScalarProperty Name="interest" ColumnName="interest" />
+                <ScalarProperty Name="birth_year" ColumnName="birth_year" />
+                <ScalarProperty Name="hijos" ColumnName="hijos" />
+                <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+                <ScalarProperty Name="transport" ColumnName="transport" />
+                <ScalarProperty Name="ambience" ColumnName="ambience" />
+                <ScalarProperty Name="dress_preference" ColumnName="dress_preference" />
+                <ScalarProperty Name="drink_level" ColumnName="drink_level" />
+                <ScalarProperty Name="smoker" ColumnName="smoker" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Caballodetroya">
+            <EntityTypeMapping TypeName="RecommendationAppDBModel.Caballodetroya">
+              <MappingFragment StoreEntitySet="Caballodetroya">
+                <ScalarProperty Name="dueño" ColumnName="dueño" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESTAURANTES">
+            <EntityTypeMapping TypeName="RecommendationAppDBModel.RESTAURANTES">
+              <MappingFragment StoreEntitySet="RESTAURANTES">
+                <ScalarProperty Name="other_services" ColumnName="other_services" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="franchise" ColumnName="franchise" />
+                <ScalarProperty Name="Rambience" ColumnName="Rambience" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="accessibility" ColumnName="accessibility" />
+                <ScalarProperty Name="dress_code" ColumnName="dress_code" />
+                <ScalarProperty Name="smoking_area" ColumnName="smoking_area" />
+                <ScalarProperty Name="alcohol" ColumnName="alcohol" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="the_geom_meter" ColumnName="the_geom_meter" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="placeID" ColumnName="placeID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_COMIDA">
+            <EntityTypeMapping TypeName="RecommendationAppDBModel.TIPO_COMIDA">
+              <MappingFragment StoreEntitySet="TIPO_COMIDA">
+                <ScalarProperty Name="Rcuisine" ColumnName="Rcuisine" />
+                <ScalarProperty Name="placeID" ColumnName="placeID" />
+                <ScalarProperty Name="tipoID" ColumnName="tipoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

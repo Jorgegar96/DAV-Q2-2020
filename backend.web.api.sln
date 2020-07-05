@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend.web.api", "backend.web.api\backend.web.api.csproj", "{A9A3D3AE-C7F5-4E7F-B120-0230CE0E46BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{693BEEA7-4560-4BCA-BAE3-2311C6CB1FAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9A3D3AE-C7F5-4E7F-B120-0230CE0E46BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A3D3AE-C7F5-4E7F-B120-0230CE0E46BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A3D3AE-C7F5-4E7F-B120-0230CE0E46BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A3D3AE-C7F5-4E7F-B120-0230CE0E46BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693BEEA7-4560-4BCA-BAE3-2311C6CB1FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693BEEA7-4560-4BCA-BAE3-2311C6CB1FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693BEEA7-4560-4BCA-BAE3-2311C6CB1FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693BEEA7-4560-4BCA-BAE3-2311C6CB1FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAED23C5-A33C-4C34-9001-6BF8C2CDE78F}
+	EndGlobalSection
+EndGlobal

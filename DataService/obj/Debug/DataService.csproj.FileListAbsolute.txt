@@ -1,0 +1,12 @@
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\DataService.dll.config
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\DataService.dll
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\DataService.pdb
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\EntityFramework.dll
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\EntityFramework.xml
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\obj\Debug\DataService.csprojAssemblyReference.cache
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\obj\Debug\DataService.csproj.CoreCompileInputs.cache
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\obj\Debug\DataService.csproj.CopyComplete
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\obj\Debug\DataService.dll
+C:\Users\BLANCA\source\repos\backend.web.api\DataService\obj\Debug\DataService.pdb

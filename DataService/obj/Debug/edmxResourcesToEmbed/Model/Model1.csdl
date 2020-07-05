@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RecommendationAppDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RecommendationAppDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Caballito" EntityType="RecommendationAppDBModel.Caballito" />
+    <EntitySet Name="USUARIOS" EntityType="RecommendationAppDBModel.USUARIOS" />
+  </EntityContainer>
+  <EntityType Name="Caballito">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="dueño" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="smoker" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="drink_level" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dress_preference" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ambience" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="transport" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="marital_status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="hijos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="birth_year" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="personality" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="religion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="activity" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="budget" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="height" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
